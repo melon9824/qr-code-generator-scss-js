@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+body{
+    background-color: #262a2f;
+    
+    .container{
+        width: 25rem;
+        padding: 1.5rem 2rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border-radius: .6rem;
+    
+        p{
+            font-size: .9rem;
+            font-weight: 600;
+            margin-bottom: .5rem;
+        }
+    
+        input{
+            width: 100%;
+            height: 4rem;
+            border: 0.1rem solid #494eea;
+            padding: 0.6rem;
+            margin: 0.6rem 0 1.25rem;
+            border-radius: 0.3rem;
+        }
+
+        #imgBox{
+            width: 12.5rem;
+            max-height: 0;
+            border-radius: 0.3rem;
+            overflow: hidden;
+            transition: max-height 1s;
+
+            #qrImage{
+                width: 100%;
+                padding: 0.6rem;
+            }
+        }
+
+        #imgBox.show-img{
+            max-height: 18rem;
+            margin: 0.6rem auto;
+            border: 0.1rem solid #d1d1d1;
+        }
+    
+        button{
+            width: 100%;
+            height: 4rem;
+            background-color: #494eea;
+            color: #fff;
+            font-weight: 500;
+            border: 0;
+            border-radius: 0.3rem;
+            margin: 1.25rem 0;
+            cursor: pointer;
+            transition: 0.3s all;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    
+            &:hover{
+                background: #161df1;
+            }
+        }
+    }
+
+    footer{
+        text-align: right;
+        
+        small{
+            font-size: 0.625rem;
+            color: rgb(173, 170, 170);
+
+            a{
+                text-decoration: none;
+                font-style: oblique;
+                color: rgb(51, 191, 238);
+                transition: 0.3s all;
+
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+/* animation */
+.error{
+    animation: shake 0.1s linear 10;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(2px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
